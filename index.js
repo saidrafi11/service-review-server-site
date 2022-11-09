@@ -20,7 +20,16 @@ async function run(){
       const featuredService = client.db('serviceReview').collection('featuredServices')
       const blogs = client.db('serviceReview').collection('blogs')
 
+
+
       
+      app.get('/featured', async(req, res)=>{
+        const query = {}
+        const cursor = featuredService.find(query);
+        const fService = await cursor.toArray();
+        res.send(fService)
+
+      });
 
 
       app.get('/services', async(req, res)=>{
