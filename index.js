@@ -18,6 +18,7 @@ async function run(){
     try{
       const serviceCollection = client.db('serviceReview').collection('services')
       const blogs = client.db('serviceReview').collection('blogs')
+      const featuredService = client.db('serviceReview').collection('featuredServices')
 
 
 
