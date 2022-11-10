@@ -75,6 +75,7 @@ async function run(){
           reviews: {
             id: ObjectId(),
             email: newReview.email,
+            imgURL: newReview.imgURL,
             reviewMsg: newReview.review
           }
         }
