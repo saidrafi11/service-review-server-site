@@ -41,7 +41,13 @@ async function run(){
       });
 
 
-      
+      app.get('/blog', async(req, res)=>{
+        const query = {}
+        const cursor = blogs.find(query);
+        const Blogs = await cursor.toArray();
+        res.send(Blogs)
+
+      });
 
 
       app.post('/services', (req, res)=>{
